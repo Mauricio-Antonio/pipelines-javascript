@@ -18,4 +18,6 @@ steps:
 - script: |
     npm install
     npm run build
+    cd $(Build.Repository.LocalPath)/tests
+    ls -ll $(Build.Repository.LocalPath)
   displayName: 'npm install and build'
