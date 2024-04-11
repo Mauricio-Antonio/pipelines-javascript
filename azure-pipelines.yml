@@ -22,14 +22,11 @@ steps:
 - script: |
     npm install
     npm run build
-    mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
-    mkdir -p '$(pathToTest)/testPath'
-    cd $(pathToTest)/testPath
+    mkdir -p '$(pathToTest)'/testPath
+    cd '$(pathToTest)'/testPath
     echo pathToTest.txt
-    ls -ll $(pathToTest)/testPath
-    cd  $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
-    echo text.html
-    ls
+    ls -ll '$(pathToTest)'/testPath
+
     
     
 
@@ -39,3 +36,7 @@ steps:
 #    mkdir -p $(Build.Repository.LocalPath)/$(Build.PullRequest.TargetBranchName)/testTargetBranch
 #    mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranch)/testSourceBranch
 # echo $(Build.Repository.LocalPath)/$(Build.PullRequest.TargetBranchName)/test
+#    cd  $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
+#    echo text.html
+#    ls
+#    mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
