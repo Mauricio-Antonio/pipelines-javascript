@@ -10,6 +10,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables: 
+  pathToTest: $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
+
 steps:
 - task: NodeTool@0
   inputs:
@@ -20,7 +23,7 @@ steps:
     npm install
     npm run build
     mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
-    echo $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
+    echo $(pathToTest)
     cd  $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
     echo text.html
     ls
