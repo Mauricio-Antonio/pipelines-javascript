@@ -22,10 +22,10 @@ steps:
 - script: |
     npm install
     npm run build
-    mkdir -p '$(pathToTest)'/testPath
-    cd '$(pathToTest)'/testPath
+    mkdir -p "$(pathToTest)"/testPath
+    cd "$(pathToTest)"/testPath
     echo pathToTest.txt
-    ls -ll '$(pathToTest)'/testPath
+    ls -ll "$(pathToTest)"/testPath
 
     
     
