@@ -24,6 +24,9 @@ steps:
     npm run build
     mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
     mkdir -p '$(pathToTest)/testPath'
+    cd $(pathToTest)/testPath
+    echo pathToTest.txt
+    ls -ll $(pathToTest)/testPath
     cd  $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
     echo text.html
     ls
