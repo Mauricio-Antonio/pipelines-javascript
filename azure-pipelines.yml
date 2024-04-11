@@ -18,6 +18,10 @@ steps:
 - script: |
     npm install
     npm run build
-    cd $(Build.Repository.LocalPath)/tests
-    ls -ll $(Build.Repository.LocalPath)/tests
+    mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
+    echo $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
+    cd $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
+    ls -ll $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
+    echo file.txt
+    ls
   displayName: 'npm install and build'
