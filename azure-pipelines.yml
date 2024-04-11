@@ -24,4 +24,13 @@ steps:
     ls -ll $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
     echo file.txt
     ls
+
+    echo $(Build.SourceBranch)
+    echo $(Build.Repository.LocalPath)
+    echo $(Build.SourceBranchName)
+    echo $(Build.PullRequest.TargetBranch)
+    echo $(Build.PullRequest.TargetBranchName)
+    echo $(Build.DefinitionName)
+    echo $(Build.BuildURI)
+    echo $(Build.BuildId)
   displayName: 'npm install and build'
