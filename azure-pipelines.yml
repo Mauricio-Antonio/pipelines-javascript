@@ -21,10 +21,15 @@ steps:
     npm run build
     mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
     echo $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
-    echo $(Build.Repository.LocalPath)/$(Build.PullRequest.TargetBranchName)/test
+    cd  $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
+    echo text.html
+    ls -ll
+    
+    
 
   displayName: 'npm install and build'
 
 #    mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/testBranchName
 #    mkdir -p $(Build.Repository.LocalPath)/$(Build.PullRequest.TargetBranchName)/testTargetBranch
 #    mkdir -p $(Build.Repository.LocalPath)/$(Build.SourceBranch)/testSourceBranch
+# echo $(Build.Repository.LocalPath)/$(Build.PullRequest.TargetBranchName)/test
