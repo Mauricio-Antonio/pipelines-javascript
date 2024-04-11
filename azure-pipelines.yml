@@ -23,7 +23,7 @@ steps:
     echo $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
     cd  $(Build.Repository.LocalPath)/$(Build.SourceBranchName)/test
     echo text.html
-    ls -ll
+    ls
     
     
 
